@@ -14,7 +14,7 @@ Le projet utilise plusieurs techniques de stabilisation de l'entraînement :
   - Discriminateur : `0.0001`
   - Générateur : `0.0002`
 - **Spectral Normalization** dans le discriminateur
-- Suivi de `D(x)` et `D(G(z))`
+- Suivi de `D(x)` et `D(G(z))` : D(x) mesure la confiance du discriminateur lorsqu’il reçoit une image réelle, tandis que D(G(z)) mesure sa confiance lorsqu’il reçoit une image générée par le générateur.
 - Sauvegarde de checkpoints pendant l'entraînement
 
 ## Architecture
@@ -98,12 +98,11 @@ Le notebook affiche également les courbes de :
 Cloner le projet :
 
 ```bash
-git clone <URL_DU_REPO>
-cd <NOM_DU_REPO>
+git clone https://github.com/NASMAN7/DCGAN-Generation-de-visages-Anime.git
+cd DCGAN-Generation-de-visages-Anime
 ```
 
-Installer les dépendances :
-
+Installer les dépendances (si vous choisissez d'exécuter le projet hors de Colab) :
 ```bash
 pip install -r requirements.txt
 ```
@@ -121,19 +120,6 @@ DCGAN_Anime.ipynb
 Puis exécuter les cellules dans l'ordre.
 
 Le notebook utilise Google Drive pour sauvegarder les modèles et les résultats lorsqu'il est exécuté sur Colab.
-
-## Structure recommandée du repository
-
-```text
-.
-├── DCGAN_Anime.ipynb
-├── README.md
-├── requirements.txt
-├── generator.pth          # optionnel
-└── discriminator.pth      # optionnel
-```
-
-Le dataset et les checkpoints intermédiaires ne doivent pas être ajoutés au repository s'ils sont volumineux.
 
 ## Résultats
 
@@ -159,4 +145,4 @@ Les résultats du projet comprennent :
 
 ## Auteur
 
-Projet de Deep Learning — DCGAN pour la génération de visages Anime.
+Réalisé par **NASMAN7** (Projet de Deep Learning — DCGAN)
